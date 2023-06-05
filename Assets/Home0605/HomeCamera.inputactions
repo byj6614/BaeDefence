@@ -1,0 +1,54 @@
+{
+    "name": "HomeCamera",
+    "maps": [
+        {
+            "name": "HomeCa",
+            "id": "92cc8f5f-5c91-4a84-983c-34457a1dac27",
+            "actions": [
+                {
+                    "name": "HomePoint",
+                    "type": "Value",
+                    "id": "0c0bb4e4-be28-4464-9ea8-6c248460bc7a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "HomeZoom",
+                    "type": "Value",
+                    "id": "dbd7e69c-c5e2-4674-9a30-60b9dffd4eaf",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "25af55a7-b608-45fc-8e3c-5a2d004fb59b",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HomePoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "66a21bd2-42b7-4616-adf2-16c4930029af",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HomeZoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
