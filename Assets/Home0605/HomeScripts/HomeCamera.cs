@@ -30,7 +30,7 @@ public class HomeCamera : MonoBehaviour
         //카메라의 위치를 현재 위치에 앞방향으로 세계기준으로 y방향으로 움직이게 하기
         transform.Translate(Vector3.right * moveDir.x * moveSpeed * Time.deltaTime, Space.World);
     }   //카메라의 위치를 현재 위치에 앞방향으로 세계기준으로 x방향으로 움직이게 하기
-    private void OnHomePointer(InputValue value)//카메라의 움직임의 방향과 그 조건을 마우스의 위치에 따라 지정해주기
+    private void OnHomePoint(InputValue value)//카메라의 움직임의 방향과 그 조건을 마우스의 위치에 따라 지정해주기
     {
         Vector2 mousePos = value.Get<Vector2>();//Vector2의 값을 담는다.
         if (mousePos.x <= padding)//마우스의.x 위치가 지정한 padding값보다 같거나 작을경우 x축으로 -1방향으로 가게한다.
