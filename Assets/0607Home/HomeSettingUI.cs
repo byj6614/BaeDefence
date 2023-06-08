@@ -15,6 +15,6 @@ public class HomeSettingUI : HomeScene
 
     public void OpenPausePopUp()
     {
-        GameManager.Ui.ShowPopUpUI("HomeUI/SettingUI");
+        //GameManager.Ui.ShowPopUpUI("HomeUI/SettingUI");
     }
 }

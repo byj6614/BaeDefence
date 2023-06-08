@@ -8,14 +8,20 @@ public class SettingSceneUI : SceneUI
     {
         base.Awake();
 
-        buttons["InfoButton"].onClick.AddListener(() => { Debug.Log("Info"); });
+        buttons["InfoButton"].onClick.AddListener(() => { OpenInfoWindowUI(); });
         buttons["SoundButton"].onClick.AddListener(() => { Debug.Log("Sound"); });
         buttons["SettingButton"].onClick.AddListener(() => { OpenPausePopUp(); });
     }
 
+    public void OpenInfoWindowUI()
+    {
+        //GameManager.Ui.ShowWindowUI("UI/InfoWindowUI");
+        //0608°úÁ¦
+        GameManager.Ui.ShowHomeWindowUI("HomeUI/HomeWindowUI");
+    }
     public void OpenPausePopUp()
     {
-        //GameManager.Ui.ShowPopUpUI<PopupUI>("UI/SettingPopUp");
+        GameManager.Ui.ShowPopUpUI<PopupUI>("UI/SettingPopUp");
     }
    
    

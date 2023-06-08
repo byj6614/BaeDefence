@@ -8,6 +8,6 @@ public class HomeSettingPop : HomePop
     {
         base.Awake();
         buttons["ContinueButton"].onClick.AddListener(() => { GameManager.Ui.ClosePopUpUI(); });
-        buttons["SoundButton"].onClick.AddListener(() => { GameManager.Ui.ShowPopUpUI("HomeUI/SoundSetting"); });
+       // buttons["SoundButton"].onClick.AddListener(() => { GameManager.Ui.ShowPopUpUI("HomeUI/SoundSetting"); });
     }
 }

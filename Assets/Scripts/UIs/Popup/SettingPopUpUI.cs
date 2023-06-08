@@ -8,6 +8,6 @@ public class SettingPopUpUI : PopupUI
     {
         base.Awake();
         buttons["ContinueButton"].onClick.AddListener(()=>{ GameManager.Ui.ClosePopUpUI(); });
-        //buttons["SettingButton"].onClick.AddListener(() => { GameManager.Ui.ShowPopUpUI<PopupUI>("UI/ConfigPopUpUI"); });
+        buttons["SettingButton"].onClick.AddListener(() => { GameManager.Ui.ShowPopUpUI<PopupUI>("UI/ConfigPopUpUI"); });
     }
 }

@@ -10,6 +10,9 @@ public class UiManager : MonoBehaviour
     private Canvas popupUpCanvas;
     private Stack<PopupUI> popupStack;
 
+    private Canvas windowCanvas;
+
+    private Canvas inGameCanvas;
     private void Awake()
     {
         eventSystem = GameManager.Resource.Instantiate<EventSystem>("UI/EventSystem");
@@ -19,6 +22,16 @@ public class UiManager : MonoBehaviour
         popupUpCanvas.gameObject.name = "PopupCanvas";
         popupUpCanvas.sortingOrder = 100;
         popupStack = new Stack<PopupUI>();
+
+       windowCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
+       windowCanvas.gameObject.name = "WindowCanvas";
+       windowCanvas.sortingOrder = 10;
+
+        //gameSceneCanvas.sortingOrder=1;
+
+        inGameCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
+        inGameCanvas.gameObject.name = "InGameCanvas";
+        inGameCanvas.sortingOrder = 0;
     }
 
     public T ShowPopUpUI<T>(T popUPui) where T : PopupUI
@@ -55,5 +68,79 @@ public class UiManager : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
+    }
+
+    public void ShowWindowUI(WindowUI windowUI)
+    {
+        WindowUI ui = GameManager.Pool.GetUI(windowUI);
+        ui.transform.SetParent(windowCanvas.transform, false);
+    }
+    public void ShowWindowUI(string path)
+    {
+        WindowUI ui = GameManager.Resource.Load<WindowUI>(path);
+        ShowWindowUI(ui);
+    }
+    public void SelectWindowUI(WindowUI windowUI)
+    {
+        windowUI.transform.SetAsLastSibling();
+
+    }
+    public void CloseWindowUI(WindowUI windowUI)
+    {
+        GameManager.Pool.Release(windowUI.gameObject);
+    }
+    //0608°úÁ¦
+    public void ShowHomeWindowUI(HomeWindow windowUI)
+    {
+        HomeWindow ui = GameManager.Pool.GetUI(windowUI);
+        ui.transform.SetParent(windowCanvas.transform, false);
+    }
+    public void ShowHomeWindowUI(string path)
+    {
+        HomeWindow ui = GameManager.Resource.Load<HomeWindow>(path);
+        ShowHomeWindowUI(ui);
+    }
+    public void CloseWindowUI(HomeWindow windowUI)
+    {
+        GameManager.Pool.Release(windowUI.gameObject);
+    }
+    public void SelectWindowUI(HomeWindow windowUI)
+    {
+        windowUI.transform.SetAsLastSibling();
+
+    }
+    public T ShowHInGameUI<T>(T inGameUI) where T : HomeInGame
+    {
+        T ui = GameManager.Pool.GetUI(inGameUI);
+        ui.transform.SetParent(inGameCanvas.transform.transform, false);
+        return ui;
+    }
+
+    public T ShowHInGameUI<T>(string Path) where T : HomeInGame
+    {
+        T ui = GameManager.Resource.Load<T>(Path);
+        return ShowHInGameUI(ui);
+    }
+    public void CloseHInGameUI(HomeInGame inGameUI)
+    {
+        GameManager.Pool.Release(inGameUI.gameObject);
+    }
+    //
+    public T ShowInGameUI<T>(T inGameUI) where T : InGameUI
+    {
+        T ui =GameManager.Pool.GetUI(inGameUI);
+        ui.transform.SetParent(inGameCanvas.transform.transform, false);
+        return ui;
+    }
+
+    public T ShowInGameUI<T>(string Path) where T : InGameUI
+    {
+        T ui = GameManager.Resource.Load<T>(Path);
+        return ShowInGameUI(ui);
+    }
+
+    public void CloseInGameUI<T>(T inGameUI) where T : InGameUI
+    {
+        GameManager.Pool.Release(inGameUI.gameObject);
     }
 }
