@@ -17,7 +17,7 @@ public class TowerData : ScriptableObject
 
         public int damage;
         public float range;
-        public int delay;
+        public float delay;
         public float buildTime;
         public int buildCost;
         public int sellCost;

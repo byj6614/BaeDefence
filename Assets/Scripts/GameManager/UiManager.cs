@@ -89,43 +89,6 @@ public class UiManager : MonoBehaviour
     {
         GameManager.Pool.Release(windowUI.gameObject);
     }
-    //0608°úÁ¦
-    public void ShowHomeWindowUI(HomeWindow windowUI)
-    {
-        HomeWindow ui = GameManager.Pool.GetUI(windowUI);
-        ui.transform.SetParent(windowCanvas.transform, false);
-    }
-    public void ShowHomeWindowUI(string path)
-    {
-        HomeWindow ui = GameManager.Resource.Load<HomeWindow>(path);
-        ShowHomeWindowUI(ui);
-    }
-    public void CloseWindowUI(HomeWindow windowUI)
-    {
-        GameManager.Pool.Release(windowUI.gameObject);
-    }
-    public void SelectWindowUI(HomeWindow windowUI)
-    {
-        windowUI.transform.SetAsLastSibling();
-
-    }
-    public T ShowHInGameUI<T>(T inGameUI) where T : HomeInGame
-    {
-        T ui = GameManager.Pool.GetUI(inGameUI);
-        ui.transform.SetParent(inGameCanvas.transform.transform, false);
-        return ui;
-    }
-
-    public T ShowHInGameUI<T>(string Path) where T : HomeInGame
-    {
-        T ui = GameManager.Resource.Load<T>(Path);
-        return ShowHInGameUI(ui);
-    }
-    public void CloseHInGameUI(HomeInGame inGameUI)
-    {
-        GameManager.Pool.Release(inGameUI.gameObject);
-    }
-    //
     public T ShowInGameUI<T>(T inGameUI) where T : InGameUI
     {
         T ui =GameManager.Pool.GetUI(inGameUI);

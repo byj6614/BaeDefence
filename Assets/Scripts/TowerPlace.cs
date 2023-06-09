@@ -14,14 +14,10 @@ public class TowerPlace : MonoBehaviour, IPointerClickHandler,IPointerExitHandle
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        /*
+       
         BuildInGameUI buildUI = GameManager.Ui.ShowInGameUI<BuildInGameUI>("UI/BuildInGame");
         buildUI.SetTarget(transform);
-        buildUI.towerPlace = this;*/
-        //0608°úÁ¦
-        HomeBuild homeBuild = GameManager.Ui.ShowHInGameUI<HomeBuild>("HomeUI/HomeBuild");
-        homeBuild.HomeTarget(transform);
-        homeBuild.towerHplace=this;
+        buildUI.towerPlace = this;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

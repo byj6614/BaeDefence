@@ -15,9 +15,9 @@ public class SettingSceneUI : SceneUI
 
     public void OpenInfoWindowUI()
     {
-        //GameManager.Ui.ShowWindowUI("UI/InfoWindowUI");
-        //0608°úÁ¦
-        GameManager.Ui.ShowHomeWindowUI("HomeUI/HomeWindowUI");
+        GameManager.Ui.ShowWindowUI("UI/InfoWindowUI");
+        
+        
     }
     public void OpenPausePopUp()
     {

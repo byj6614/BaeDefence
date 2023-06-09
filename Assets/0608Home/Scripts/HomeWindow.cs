@@ -11,7 +11,7 @@ public class HomeWindow : BaseUI,IDragHandler,IPointerDownHandler
     {
         base.Awake();
 
-        buttons["Close"].onClick.AddListener(() => { GameManager.Ui.CloseWindowUI(this); });//Close라는 이름의 버튼이 눌리는 순간 이 창을 닫는다.
+        //buttons["Close"].onClick.AddListener(() => { GameManager.Ui.CloseWindowUI(this); });//Close라는 이름의 버튼이 눌리는 순간 이 창을 닫는다.
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -20,6 +20,6 @@ public class HomeWindow : BaseUI,IDragHandler,IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        GameManager.Ui.SelectWindowUI(this);//마우스가 눌리는 순간 현 위치에 가장 아래로 내려가는 함수
+        //GameManager.Ui.SelectWindowUI(this);//마우스가 눌리는 순간 현 위치에 가장 아래로 내려가는 함수
     }
 }

@@ -10,7 +10,7 @@ public class HomeBuild : HomeInGame
     {
         base.Awake();
 
-        buttons["Blocker"].onClick.AddListener(() => { GameManager.Ui.CloseHInGameUI(this); });
+      //  buttons["Blocker"].onClick.AddListener(() => { GameManager.Ui.CloseHInGameUI(this); });
         buttons["HBow"].onClick.AddListener(() => { });
     }
 }

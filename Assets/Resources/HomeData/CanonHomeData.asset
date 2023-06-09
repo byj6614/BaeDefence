@@ -12,4 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c869dc3659efc45857d0e49d2f4818, type: 3}
   m_Name: CanonHomeData
   m_EditorClassIdentifier: 
-  towers: []
+  towers:
+  - Tower: {fileID: 0}
+    damage: 0
+    range: 0
+    delay: 0
+    buildTime: 0
+    buildCost: 0
+    sellCost: 0

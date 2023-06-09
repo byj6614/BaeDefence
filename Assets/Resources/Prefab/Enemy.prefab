@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1717227337841698688}
   - component: {fileID: 9142840584707538782}
-  m_Layer: 0
+  - component: {fileID: 7294923205406950469}
+  m_Layer: 6
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,6 +91,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7294923205406950469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109278442314997559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86213e6d05341544b70ee939d2c9967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: -138566466548062351}
 --- !u!1 &469365023508536925
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +115,7 @@ GameObject:
   - component: {fileID: 7046571759345344537}
   - component: {fileID: 5919145663029256561}
   - component: {fileID: 2900993847532167025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TB_Soldier_Swordman_Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +201,7 @@ GameObject:
   - component: {fileID: 1166831398733318446}
   - component: {fileID: 5171902783119764680}
   - component: {fileID: 8343188262448406059}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +279,7 @@ GameObject:
   - component: {fileID: 8210245220688588520}
   - component: {fileID: 3637345491531730514}
   - component: {fileID: 118171398}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +391,7 @@ GameObject:
   - component: {fileID: 1506205326550296356}
   - component: {fileID: 7659493739118527059}
   - component: {fileID: 8923887587881726434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +467,7 @@ GameObject:
   - component: {fileID: 1774643784802742220}
   - component: {fileID: 5103550438344809348}
   - component: {fileID: 7242388522978019694}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TB_Soldier_Swordman_Leg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5031274241572761747}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +587,7 @@ GameObject:
   - component: {fileID: 1259467313190035041}
   - component: {fileID: 4136472824969979129}
   - component: {fileID: 1039609145453716472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TB_Soldier_Swordman_Leg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +670,7 @@ GameObject:
   - component: {fileID: 2530504264269655869}
   - component: {fileID: 5092015160317899789}
   - component: {fileID: 1705539801220960294}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TB_Soldier_Swordman_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +753,10 @@ GameObject:
   - component: {fileID: 1085036086824441614}
   - component: {fileID: 8001348494377920179}
   - component: {fileID: 8242571463625967798}
-  m_Layer: 0
+  - component: {fileID: -4717134316414352360}
+  - component: {fileID: 5039859848201845163}
+  - component: {fileID: -138566466548062351}
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -773,7 +790,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -797,3 +814,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b3df6190cf216b4bb5a44e1abc762cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &-4717134316414352360
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168566989031402775}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.3275852
+  m_Height: 4.5278516
+  m_Direction: 1
+  m_Center: {x: 0.098712206, y: 1.7639258, z: 0}
+--- !u!54 &5039859848201845163
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168566989031402775}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-138566466548062351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168566989031402775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e32b638de730948b60ffedbb98ff77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 3
+  OnChangeHP:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDied:
+    m_PersistentCalls:
+      m_Calls: []

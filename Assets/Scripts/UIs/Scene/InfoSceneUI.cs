@@ -10,7 +10,6 @@ public class InfoSceneUI : SceneUI
         base.Awake();
         texts["HeartText"].text = "10";
         texts["CoinText"].text = "100";
-
     }
 
 }
